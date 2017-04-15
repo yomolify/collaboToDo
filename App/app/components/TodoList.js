@@ -40,14 +40,13 @@ var TodoList = React.createClass({
         });
     },
     onRefresh() {
-        console.log("On Refresh");
+        console.log("On");
         this.setState({refreshing: true});
-        this.props.dispatch(getTodos).then(() => {
+        this.props.dispatch(getTodos()).then(() => {
             this.setState({refreshing: false});
         });
     },
     render(){
-        console.log("todos", this.props.todos);
         var renderTodos = () => {
             return this.props.todos.map((todo) => {
                 return (
@@ -74,7 +73,7 @@ var TodoList = React.createClass({
                     refreshControl={
                         <RefreshControl
                             refreshing={this.state.refreshing}
-                            onRefresh={this.onRefres}
+                            onRefresh={this.onRefresh}
                         />
                     }
                 >
@@ -83,6 +82,7 @@ var TodoList = React.createClass({
             </View>
 
         );
+        this.onRefresh();
     }
 });
 
