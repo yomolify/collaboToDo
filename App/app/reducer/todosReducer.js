@@ -9,7 +9,7 @@ module.exports = (state= [], action) => {
             return action.todos;
         case 'REMOVE_TODO':
             return state.filter((todo) => {
-                if (todo._id == action.id) {
+                if (todo._id == action.todo_id) {
                     return false;
                 }
                 else {

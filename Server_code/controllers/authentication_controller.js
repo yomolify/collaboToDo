@@ -13,7 +13,6 @@ function tokenForUser(user){
 exports.signin= function(req,res,next) {
     var user=req.user;
     res.send({token: tokenForUser(user), user_id : user._id});
-    console.log(user.todos);
 }
 
 exports.signup = function(req,res,next) {

@@ -20,9 +20,13 @@ router.route('/signup').post(AuthenticationController.signup);
 router.route('/signin').post([requireLogin, AuthenticationController.signin]);
 
 router.route('/users/:user_id/todos')
-    .post(requireAuth,TodosController.create);
+    .get(requireAuth,TodosController.index);
 
 router.route('/users/:user_id/todos')
-    .get(requireAuth,TodosController.index);
+    .post(requireAuth,TodosController.create);
+
+router.route('/users/:user_id/todos/:todo_id')
+    .delete(requireAuth,TodosController.destroy);
+
 
 module.exports = router;

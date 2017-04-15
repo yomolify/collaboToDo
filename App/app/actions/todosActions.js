@@ -36,10 +36,29 @@ exports.getTodos = () => {
                 return axios.get(TODOS_URL(user), {
                     headers: {authorization: password}
                 }).then((response) => {
-                    console.log("Call : ",response.data.todos);
                     dispatch(setTodos(response.data.todos));
                 }).catch((err) => {
                     dispatch(addAlert("Could not get todos."))
+                })
+            })
+        })
+    }
+}
+
+exports.deleteTodos = (todo_id) => {
+    var user;
+    return function (dispatch) {
+        return AsyncStorage.getItem("uuid").then((data) => {
+            user = data;
+            console.log("add",user);
+            AsyncStorage.getItem(user).then((credentials) => {
+                var password = credentials;
+                return axios.delete(TODO_URL(user,todo_id), {
+                    headers: {authorization: password}
+                }).then((response) => {
+                    dispatch(removeTodo(todo_id));
+                }).catch((err) => {
+                    dispatch(addAlert("Could not delete todo."))
                 })
             })
         })
@@ -50,6 +69,13 @@ var addTodo = (newTodo) => {
     return {
         type: 'ADD_TODO',
         newTodo
+    }
+}
+
+var removeTodo = (todo_id) => {
+    return {
+        type: 'REMOVE_TODO',
+        todo_id
     }
 }
 

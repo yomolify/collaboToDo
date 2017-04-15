@@ -10,18 +10,37 @@ import {
     RefreshControl
 } from 'react-native';
 
-import {unauthUser, getTodos} from '../actions';
+import {unauthUser, getTodos,deleteTodos} from '../actions';
 import NewTodo from './NewTodo';
 
-var TodoItem = React.createClass({
+var TodoItem = connect()(React.createClass({
+    getInitialState() {
+        return {
+            deleting: false
+        }
+    },
+    onDelete() {
+        this.setState({deleting : true});
+        this.props.dispatch(deleteTodos(this.props.id));
+    },
     render() {
+        var renderDeleteButton = () => {
+            if (!this.state.deleting) {
+                return (
+                    <TouchableOpacity onPress={this.onDelete}>
+                        <Icon name="x" size={15} color="#2ecc71"/>
+                    </TouchableOpacity>
+                )
+            }
+        }
         return (
             <View style={styles.todoContainer}>
                 <Text>{this.props.text}</Text>
+                {renderDeleteButton()}
             </View>
         )
     }
-});
+}));
 
 var TodoList = React.createClass({
     getInitialState() {
@@ -82,7 +101,6 @@ var TodoList = React.createClass({
             </View>
 
         );
-        this.onRefresh();
     }
 });
 
@@ -110,7 +128,10 @@ const styles = StyleSheet.create({
         borderTopWidth: 1,
         borderBottomWidth: 1,
         marginTop: -1,
-        borderColor: "#ccc"
+        borderColor: "#ccc",
+        flexDirection: 'row',
+        justifyContent: 'space-between',
+        alignItems: 'center'
     }
 });
 
