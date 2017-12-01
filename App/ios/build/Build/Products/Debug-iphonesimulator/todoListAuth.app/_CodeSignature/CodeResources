@@ -6,7 +6,7 @@
 	<dict>
 		<key>Base.lproj/LaunchScreen.nib</key>
 		<data>
-		3qKwFKhI4a6SoOIqZ1DaNPE9PIc=
+		xSPiDTWeY1b0vwOlWrKUDCc4Xfk=
 		</data>
 		<key>Entypo.ttf</key>
 		<data>
@@ -15,6 +15,10 @@
 		<key>EvilIcons.ttf</key>
 		<data>
 		QZrcvnS7qREj2zspB3XjYvIS8+U=
+		</data>
+		<key>Feather.ttf</key>
+		<data>
+		AiHzjp4t0CEzVCcxbr7QXuznQyM=
 		</data>
 		<key>FontAwesome.ttf</key>
 		<data>
@@ -239,7 +243,7 @@
 		</data>
 		<key>Info.plist</key>
 		<data>
-		CizjC1uYNxJsVMSslOfGLQ6AqtI=
+		gBu2X02BLuRDuVsXinIu8sgro4I=
 		</data>
 		<key>Ionicons.ttf</key>
 		<data>
@@ -247,7 +251,7 @@
 		</data>
 		<key>MaterialCommunityIcons.ttf</key>
 		<data>
-		W28Wp8frwGzTm8xVYZzGjCm0cW4=
+		iEMpKSoaB/KiSnpQryZBH+pXuYo=
 		</data>
 		<key>MaterialIcons.ttf</key>
 		<data>
@@ -255,7 +259,7 @@
 		</data>
 		<key>Octicons.ttf</key>
 		<data>
-		nDHzgr8cV2wncaeFbvmESHJDPUg=
+		43wPh5FmspBv+00q8kJl9AIbRBc=
 		</data>
 		<key>PkgInfo</key>
 		<data>
@@ -296,11 +300,11 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			3qKwFKhI4a6SoOIqZ1DaNPE9PIc=
+			xSPiDTWeY1b0vwOlWrKUDCc4Xfk=
 			</data>
 			<key>hash2</key>
 			<data>
-			rVoTfpIefkS+FKMDFGzroLaXsBRMgbomTCVwic4lTNI=
+			xetP1oi5JIxnaZ1vI3ej+/uZSqqcUZX91vO/b5YiXG0=
 			</data>
 		</dict>
 		<key>Entypo.ttf</key>
@@ -323,6 +327,17 @@
 			<key>hash2</key>
 			<data>
 			J9GohnZmGjoiaVdpUtb3ANoFZEvAMFUR3iO3D3HKVDY=
+			</data>
+		</dict>
+		<key>Feather.ttf</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			AiHzjp4t0CEzVCcxbr7QXuznQyM=
+			</data>
+			<key>hash2</key>
+			<data>
+			sse5lKY8HPl6gBWzGq4njD9mmOqvSOduEWdc+dNdrHY=
 			</data>
 		</dict>
 		<key>FontAwesome.ttf</key>
@@ -936,11 +951,11 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			W28Wp8frwGzTm8xVYZzGjCm0cW4=
+			iEMpKSoaB/KiSnpQryZBH+pXuYo=
 			</data>
 			<key>hash2</key>
 			<data>
-			MDrqh7+l+hNgAV8dCByqY6LZ0ainLHm9rBg2H+vNdnU=
+			1bSKsbDzuZUQE0oDJhp+sgYYtyyRBwyCUcQIAoyRcm4=
 			</data>
 		</dict>
 		<key>MaterialIcons.ttf</key>
@@ -958,11 +973,11 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			nDHzgr8cV2wncaeFbvmESHJDPUg=
+			43wPh5FmspBv+00q8kJl9AIbRBc=
 			</data>
 			<key>hash2</key>
 			<data>
-			zLOa3HG6r1FR8G3HAL3RBNLhvSx9Ru2iAlXyNPR6vuo=
+			IDC914RgQrcm7e1pDO4UjqugvZKBAae3xLoaLztAPMg=
 			</data>
 		</dict>
 		<key>PlugIns/todoListAuthTests.xctest.dSYM/Contents/Info.plist</key>

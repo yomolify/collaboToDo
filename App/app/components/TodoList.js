@@ -67,10 +67,17 @@ var TodoList = React.createClass({
     },
     render(){
         var renderTodos = () => {
+            // console.log(this.props.todos)
+            // console.log('---------------------------')
+            console.log('---------------------------')
+            // return true;
             return this.props.todos.map((todo) => {
+                console.log(this.props.todos)
+                if (todo != null) {
                 return (
                     <TodoItem key={todo._id} text={todo.text} id={todo._id}/>
                 )
+                }
             })
         }
         return (
@@ -136,7 +143,7 @@ const styles = StyleSheet.create({
 });
 
 var mapStateToProps = (state) => {
-    console.log(state.todos);
+    // console.log(state.todos);
     return {
         todos: state.todos
     }
